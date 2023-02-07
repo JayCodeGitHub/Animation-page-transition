@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -9,11 +10,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="absolute top-0 left-0 w-full h-full bg-yellow-200">
+      <motion.main
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className="absolute top-0 left-0 w-full h-full bg-yellow-200"
+      >
         <header className="absolute top-1/3 right-24">
           <h1 className="text-5xl">Home</h1>
         </header>
-      </main>
+      </motion.main>
     </>
   );
 }
