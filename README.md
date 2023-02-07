@@ -1,4 +1,4 @@
-# Happy-Notes #
+# Animation page transition #
 
 Simple page transition animation in Next.js application.
 
